@@ -1,0 +1,19 @@
+# asciinema
+*.cast
+
+# python
+__pycache__/
+*.pyc
+
+# environment variables
+.env
+
+# ruff
+.ruff_cache/
+
+# others
+.cache/
+
+# editor (vim)
+*.swp
+*.swo
