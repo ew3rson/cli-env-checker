@@ -1,4 +1,4 @@
-.PHONY: default run setup lint help # .PHONY impede o make de confundir os comandos com possíveis arquivos da pasta
+.PHONY: default run setup lint test help # .PHONY impede o make de confundir os comandos com possíveis arquivos da pasta
 
 # cores
 GREEN=\033[32m
@@ -16,9 +16,13 @@ setup:
 lint: # necessário ter shellcheck instalado
 	@shellcheck cli-env-checker.sh
 
+test: # necessário ter pytest instalado
+	@pytest test_operacoes.py -v
+
 help:
 	@printf "\n$(GREEN)--- COMANDOS DISPONÍVEIS ---$(RESET)\n\n"
 	@printf " $(YELLOW)make$(RESET)             executa o projeto\n"
 	@printf " $(YELLOW)make run$(RESET)         executa o projeto\n"
 	@printf " $(YELLOW)make setup$(RESET)       concede permissão de execução\n"
-	@printf " $(YELLOW)make lint$(RESET)        analisa o script com ShellCheck\n\n"
+	@printf " $(YELLOW)make lint$(RESET)        analisa o script com ShellCheck\n"
+	@printf " $(YELLOW)make test$(RESET)        executa os testes unitários com pytest\n\n"
