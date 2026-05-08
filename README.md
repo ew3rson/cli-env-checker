@@ -3,11 +3,12 @@
   <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black"/>
   <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white"/>
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white"/>
+  <img src="https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white"/>
   <img src="https://img.shields.io/badge/ShellCheck-FFD500?style=flat-square"/>
   <img src="https://img.shields.io/badge/Makefile-000000?style=flat-square&logo=gnu&logoColor=white"/>
 </p>
 
-este projeto consiste em uma aplicação em Python, executada via terminal, com um script em Bash responsável por validar o ambiente antes da execução e um Makefile para orquestração de tarefas.
+este projeto consiste em uma aplicação em Python, executada via terminal, com um script em Bash responsável por validar o ambiente antes da execução, testes unitários automatizados com pytest, e um Makefile para orquestração de tarefas.
 
 o foco está em consolidar e demonstrar fundamentos práticos de Linux, scripts e automação, com orquestração de tarefas em ambiente de linha de comando, simulando um fluxo real de execução, aplicando boas práticas.
 
@@ -30,6 +31,8 @@ além da implementação, o propósito está em compreender:
 - validação de ambientes
 - automação e orquestração de tarefas
 - uso de códigos de saída *(exit codes)*
+- escrita e execução de testes unitários
+- construção e funcionamento de uma pipeline
 
 ## 🚀 como executar 
 
@@ -52,6 +55,7 @@ make help
 - `make` ou `make run` — executa o projeto  
 - `make setup` — concede permissão de execução aos scripts  
 - `make lint` — analisa o script Bash com ShellCheck  
+- `make test` — executa os testes unitários com pytest
 
 ## 🧠 funcionalidades
 
@@ -62,6 +66,7 @@ make help
 - execução no padrão Unix (`./script`)
 - orquestração com Makefile
 - lint do script Bash com ShellCheck
+- testes unitários automatizados da aplicação com pytest
 - saída colorida para melhor legibilidade
 
 ## 🏗️ estrutura do projeto
@@ -69,8 +74,10 @@ make help
 ```
 .
 ├── Makefile               # orquestração de tarefas
-├── calculadora.py         # código da calculadora
-└── cli-env-checker.sh     # valida o ambiente e executa o programa
+├── cli-env-checker.sh     # valida o ambiente e executa o programa
+├── calculadora.py         # código principal da calculadora
+├── operacoes.py           # código das operações usadas pela calculadora 
+└── test_operacoes.py      # testes das funções das operações
 ```
 
 
@@ -81,6 +88,7 @@ make help
 - manipulação de permissões com `chmod`
 - validação de dependências no ambiente
 - boas práticas com `printf` em Bash
+- Quality Assurance com testes unitários
 - organização e automação com Makefile
 - uso de ferramenta de lint (ShellCheck)
 
@@ -100,8 +108,14 @@ make help
 - **Makefile orquestra o workflow**  
     >sempre achei meio chato ter que lembrar de dar `chmod` antes de rodar script. 
     >o Makefile organiza isso, padroniza a execução do projeto, e permite a execução completa com um único comando — é uma camada de automação simples, mas muito útil.
-    
-- **por que isso importa no mundo real**  
+
+- **separação de responsabilidades** 
+    >modularizar a aplicação seguindo o conceito de separação de responsabilidades é uma decisão de design que, além de deixar o código mais limpo, também facilita o reuso de funções e o teste de software.  
+
+- **Quality Assurance com pytest**
+    >apliquei QA através de testes unitários automatizados para validar as operações da aplicação, utilizando pytest.
+
+- **por que tudo isso importa no mundo real**  
     >esse projeto me ajudou a ter um vislumbre melhor de como pipelines funcionam em ambientes reais, porque são tão úteis, e como essas práticas aparecem no dia a dia de quem trabalha com automação e infraestrutura.
     
 ## 🧭 próximos passos
@@ -112,4 +126,4 @@ make help
 
 ## 🛠️ tecnologias
 
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![ShellCheck](https://img.shields.io/badge/ShellCheck-FFD500?style=for-the-badge) ![Makefile](https://img.shields.io/badge/Makefile-000000?style=for-the-badge&logo=gnu&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white) ![ShellCheck](https://img.shields.io/badge/ShellCheck-FFD500?style=for-the-badge) ![Makefile](https://img.shields.io/badge/Makefile-000000?style=for-the-badge&logo=gnu&logoColor=white)
