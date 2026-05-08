@@ -1,5 +1,6 @@
 #!/usr/bin/env python3  
 
+from operacoes import soma, subtrai, divide, multiplica, eleva
 import time
 import os
 
@@ -48,23 +49,23 @@ while True:
         num1 = float(input(f"\n{YELLOW}Digite o primeiro número: {RESET}"))
         num2 = float(input(f"\n{YELLOW}Digite o segundo número: {RESET}"))
     except ValueError:
-        print(f"\n{RED}Digite um número válido. Tente novamente!{RESET}\n")
+        print(f"\n{RED}Caractere inválido. Tente novamente!{RESET}\n")
         time.sleep(1.5)
         limpar()
         continue
 
     if operador == "+":
         operacao = "soma"
-        resultado = num1 + num2
+        resultado = soma(num1, num2)
     elif operador == "-":
         operacao = "subtração"
-        resultado = num1 - num2
+        resultado = subtrai(num1, num2)
     elif operador == "*":
         operacao = "multiplicação"
-        resultado = num1 * num2
+        resultado = multiplica(num1, num2)
     elif operador == "**":
         operacao = "potenciação"
-        resultado = num1 ** num2
+        resultado = eleva(num1, num2)
     else:  # operador "/"
         if num2 == 0:
             print(f"\n{RED}Não é possível dividir por zero.{RESET}\n")
@@ -73,7 +74,7 @@ while True:
             continue
         else:
             operacao = "divisão"
-            resultado = num1 / num2
+            resultado = divide(num1, num2)
 
     print(f"\n{GREEN}Resultado da {operacao}:{RESET} {resultado}\n")
     input(f"{CYAN}Pressione ENTER para continuar {RESET}")
