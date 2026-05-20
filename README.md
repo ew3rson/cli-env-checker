@@ -6,6 +6,7 @@
   <img src="https://img.shields.io/badge/pytest-0A9EDC?style=flat-square&logo=pytest&logoColor=white"/>
   <img src="https://img.shields.io/badge/ShellCheck-FFD500?style=flat-square"/>
   <img src="https://img.shields.io/badge/Makefile-000000?style=flat-square&logo=gnu&logoColor=white"/>
+  <img src="https://img.shields.io/badge/shfmt-316688?style=flat-square"/>
 </p>
 
 este projeto consiste em uma aplicação em Python, executada via terminal, com um script em Bash responsável por validar o ambiente antes da execução, testes unitários automatizados com pytest, e um Makefile para orquestração de tarefas.
@@ -126,4 +127,4 @@ make help
 
 ## 🛠️ tecnologias
 
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white) ![ShellCheck](https://img.shields.io/badge/ShellCheck-FFD500?style=for-the-badge) ![Makefile](https://img.shields.io/badge/Makefile-000000?style=for-the-badge&logo=gnu&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black) ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![pytest](https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white) ![ShellCheck](https://img.shields.io/badge/ShellCheck-FFD500?style=for-the-badge) ![Makefile](https://img.shields.io/badge/Makefile-000000?style=for-the-badge&logo=gnu&logoColor=white) ![shfmt](https://img.shields.io/badge/shfmt-316688?style=for-the-badge)
